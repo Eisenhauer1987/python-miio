@@ -76,6 +76,7 @@ _DREAME_L10s_PRO_ULTRA_MAPPING: MiotMapping = {
     "start_clean_extend": {"siid": 4, "aiid": 1},
     "stop_clean_extend": {"siid": 4, "aiid": 2},
     "map_view": {"siid": 6, "piid": 1},
+    "timezone": {"siid": 8, "piid": 1},
     "brush_left_time": {"siid": 9, "piid": 1},
     "brush_life_level": {"siid": 9, "piid": 2},
     "brush_left_time2": {"siid": 10, "piid": 1},
@@ -88,6 +89,7 @@ _DREAME_L10s_PRO_ULTRA_MAPPING: MiotMapping = {
     "total_clean_area": {"siid": 12, "piid": 4},
     "mop_life_level": {"siid": 18, "piid": 1},
     "mop_left_time": {"siid": 18, "piid": 2},
+    
 }
     
 _DREAME_1C_MAPPING: MiotMapping = {
