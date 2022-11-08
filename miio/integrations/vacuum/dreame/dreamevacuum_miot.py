@@ -300,7 +300,7 @@ class DeviceStatus(FormattableEnum):
     Charging = 6
     Mopping = 7
     Drying = 8
-    ManualSweeping = 13
+    Charging Completed = 13
 
 
 class WaterFlow(FormattableEnum):
