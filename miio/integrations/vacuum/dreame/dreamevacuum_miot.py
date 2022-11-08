@@ -32,6 +32,7 @@ _DREAME_L10s_PRO_ULTRA_MAPPING: MiotMapping = {
     "device_status": {"siid": 2, "piid": 1},
     "device_fault": {"siid": 2, "piid": 2},
     "cleaning_mode": {"siid": 2, "piid": 3},
+    "operating_mode": {"siid": 4, "piid": 1},
     "start_clean": {"siid": 2, "aiid": 1},
     "stop_clean": {"siid": 2, "aiid": 2},
     "battery_level": {"siid": 3, "piid": 1},
