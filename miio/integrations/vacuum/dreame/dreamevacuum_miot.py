@@ -15,17 +15,7 @@ from miio.updater import OneShotServer
 
 _LOGGER = logging.getLogger(__name__)
 
-
-DREAME_1C = "dreame.vacuum.mc1808"
-DREAME_F9 = "dreame.vacuum.p2008"
-DREAME_D9 = "dreame.vacuum.p2009"
-DREAME_Z10_PRO = "dreame.vacuum.p2028"
-DREAME_L10_PRO = "dreame.vacuum.p2029"
 DREAME_L10s_PRO_ULTRA = "dreame.vacuum.p2114a"
-DREAME_MOP_2_PRO_PLUS = "dreame.vacuum.p2041o"
-DREAME_MOP_2_ULTRA = "dreame.vacuum.p2150a"
-DREAME_MOP_2 = "dreame.vacuum.p2150o"
-DREAME_TROUVER_FINDER = "dreame.vacuum.p2036"
 
 _DREAME_L10s_PRO_ULTRA_MAPPING: MiotMapping = {
     # https://home.miot-spec.com/spec/dreame.vacuum.p2114a
@@ -37,7 +27,7 @@ _DREAME_L10s_PRO_ULTRA_MAPPING: MiotMapping = {
     "battery_level": {"siid": 3, "piid": 1},
     "charging_state": {"siid": 3, "piid": 2},
     "home": {"siid": 3, "aiid": 1},
-    "operating_mode": {"siid": 4, "piid": 1},
+    "operating_mode": {"siid": 2, "piid": 1},
     "cleaning_time": {"siid": 4, "piid": 2},
     "cleaning_area": {"siid": 4, "piid": 3},
     "cleaning_mode": {"siid": 4, "piid": 4},
@@ -98,155 +88,9 @@ _DREAME_L10s_PRO_ULTRA_MAPPING: MiotMapping = {
     "mop_left_time": {"siid": 18, "piid": 2},
     
 }
-    
-_DREAME_1C_MAPPING: MiotMapping = {
-    # https://home.miot-spec.com/spec/dreame.vacuum.mc1808
-    "battery_level": {"siid": 2, "piid": 1},
-    "charging_state": {"siid": 2, "piid": 2},
-    "device_fault": {"siid": 3, "piid": 1},
-    "device_status": {"siid": 3, "piid": 2},
-    "brush_left_time": {"siid": 26, "piid": 1},
-    "brush_life_level": {"siid": 26, "piid": 2},
-    "filter_life_level": {"siid": 27, "piid": 1},
-    "filter_left_time": {"siid": 27, "piid": 2},
-    "brush_left_time2": {"siid": 28, "piid": 1},
-    "brush_life_level2": {"siid": 28, "piid": 2},
-    "operating_mode": {"siid": 18, "piid": 1},
-    "cleaning_mode": {"siid": 18, "piid": 6},
-    "delete_timer": {"siid": 18, "piid": 8},
-    "cleaning_time": {"siid": 18, "piid": 2},
-    "cleaning_area": {"siid": 18, "piid": 4},
-    "first_clean_time": {"siid": 18, "piid": 12},
-    "total_clean_time": {"siid": 18, "piid": 13},
-    "total_clean_times": {"siid": 18, "piid": 14},
-    "total_clean_area": {"siid": 18, "piid": 15},
-    "life_sieve": {"siid": 19, "piid": 1},
-    "life_brush_side": {"siid": 19, "piid": 2},
-    "life_brush_main": {"siid": 19, "piid": 3},
-    "timer_enable": {"siid": 20, "piid": 1},
-    "start_time": {"siid": 20, "piid": 2},
-    "stop_time": {"siid": 20, "piid": 3},
-    "deg": {"siid": 21, "piid": 1, "access": ["write"]},
-    "speed": {"siid": 21, "piid": 2, "access": ["write"]},
-    "map_view": {"siid": 23, "piid": 1},
-    "frame_info": {"siid": 23, "piid": 2},
-    "volume": {"siid": 24, "piid": 1},
-    "voice_package": {"siid": 24, "piid": 3},
-    "timezone": {"siid": 25, "piid": 1},
-    "home": {"siid": 2, "aiid": 1},
-    "locate": {"siid": 17, "aiid": 1},
-    "start_clean": {"siid": 3, "aiid": 1},
-    "stop_clean": {"siid": 3, "aiid": 2},
-    "reset_mainbrush_life": {"siid": 26, "aiid": 1},
-    "reset_filter_life": {"siid": 27, "aiid": 1},
-    "reset_sidebrush_life": {"siid": 28, "aiid": 1},
-    "move": {"siid": 21, "aiid": 1},
-    "play_sound": {"siid": 24, "aiid": 3},
-    "set_voice": {"siid": 24, "aiid": 2},
-}
-
-
-_DREAME_F9_MAPPING: MiotMapping = {
-    # https://home.miot-spec.com/spec/dreame.vacuum.p2008
-    # https://home.miot-spec.com/spec/dreame.vacuum.p2009
-    # https://home.miot-spec.com/spec/dreame.vacuum.p2028
-    # https://home.miot-spec.com/spec/dreame.vacuum.p2041o
-    # https://home.miot-spec.com/spec/dreame.vacuum.p2150a
-    # https://home.miot-spec.com/spec/dreame.vacuum.p2150o
-    "battery_level": {"siid": 3, "piid": 1},
-    "charging_state": {"siid": 3, "piid": 2},
-    "device_fault": {"siid": 2, "piid": 2},
-    "device_status": {"siid": 2, "piid": 1},
-    "brush_left_time": {"siid": 9, "piid": 1},
-    "brush_life_level": {"siid": 9, "piid": 2},
-    "filter_life_level": {"siid": 11, "piid": 1},
-    "filter_left_time": {"siid": 11, "piid": 2},
-    "brush_left_time2": {"siid": 10, "piid": 1},
-    "brush_life_level2": {"siid": 10, "piid": 2},
-    "operating_mode": {"siid": 4, "piid": 1},
-    "cleaning_mode": {"siid": 4, "piid": 4},
-    "delete_timer": {"siid": 18, "piid": 8},
-    "timer_enable": {"siid": 5, "piid": 1},
-    "cleaning_time": {"siid": 4, "piid": 2},
-    "cleaning_area": {"siid": 4, "piid": 3},
-    "first_clean_time": {"siid": 12, "piid": 1},
-    "total_clean_time": {"siid": 12, "piid": 2},
-    "total_clean_times": {"siid": 12, "piid": 3},
-    "total_clean_area": {"siid": 12, "piid": 4},
-    "start_time": {"siid": 5, "piid": 2},
-    "stop_time": {"siid": 5, "piid": 3},
-    "map_view": {"siid": 6, "piid": 1},
-    "frame_info": {"siid": 6, "piid": 2},
-    "volume": {"siid": 7, "piid": 1},
-    "voice_package": {"siid": 7, "piid": 2},
-    "water_flow": {"siid": 4, "piid": 5},
-    "water_box_carriage_status": {"siid": 4, "piid": 6},
-    "timezone": {"siid": 8, "piid": 1},
-    "home": {"siid": 3, "aiid": 1},
-    "locate": {"siid": 7, "aiid": 1},
-    "start_clean": {"siid": 4, "aiid": 1},
-    "stop_clean": {"siid": 4, "aiid": 2},
-    "reset_mainbrush_life": {"siid": 9, "aiid": 1},
-    "reset_filter_life": {"siid": 11, "aiid": 1},
-    "reset_sidebrush_life": {"siid": 10, "aiid": 1},
-    "move": {"siid": 21, "aiid": 1},
-    "play_sound": {"siid": 7, "aiid": 2},
-}
-
-_DREAME_TROUVER_FINDER_MAPPING: MiotMapping = {
-    # https://home.miot-spec.com/spec/dreame.vacuum.p2029
-    # https://home.miot-spec.com/spec/dreame.vacuum.p2036
-    "battery_level": {"siid": 3, "piid": 1},
-    "charging_state": {"siid": 3, "piid": 2},
-    "device_fault": {"siid": 2, "piid": 2},
-    "device_status": {"siid": 2, "piid": 1},
-    "brush_left_time": {"siid": 9, "piid": 1},
-    "brush_life_level": {"siid": 9, "piid": 2},
-    "brush_left_time2": {"siid": 10, "piid": 1},
-    "brush_life_level2": {"siid": 10, "piid": 2},
-    "filter_life_level": {"siid": 11, "piid": 1},
-    "filter_left_time": {"siid": 11, "piid": 2},
-    "operating_mode": {"siid": 4, "piid": 1},  # work-mode
-    "cleaning_mode": {"siid": 4, "piid": 4},
-    "delete_timer": {"siid": 8, "aiid": 1},
-    "timer_enable": {"siid": 5, "piid": 1},  # do-not-disturb -> enable
-    "cleaning_time": {"siid": 4, "piid": 2},
-    "cleaning_area": {"siid": 4, "piid": 3},
-    "first_clean_time": {"siid": 12, "piid": 1},
-    "total_clean_time": {"siid": 12, "piid": 2},
-    "total_clean_times": {"siid": 12, "piid": 3},
-    "total_clean_area": {"siid": 12, "piid": 4},
-    "start_time": {"siid": 5, "piid": 2},
-    "stop_time": {"siid": 5, "piid": 3},  # end-time
-    "map_view": {"siid": 6, "piid": 1},  # map-data
-    "frame_info": {"siid": 6, "piid": 2},
-    "volume": {"siid": 7, "piid": 1},
-    "voice_package": {"siid": 7, "piid": 2},  # voice-packet-id
-    "water_flow": {"siid": 4, "piid": 5},  # mop-mode
-    "water_box_carriage_status": {"siid": 4, "piid": 6},  # waterbox-status
-    "timezone": {"siid": 8, "piid": 1},  # time-zone
-    "home": {"siid": 3, "aiid": 1},  # start-charge
-    "locate": {"siid": 7, "aiid": 1},  # audio -> position
-    "start_clean": {"siid": 4, "aiid": 1},
-    "stop_clean": {"siid": 4, "aiid": 2},
-    "reset_mainbrush_life": {"siid": 9, "aiid": 1},
-    "reset_filter_life": {"siid": 11, "aiid": 1},
-    "reset_sidebrush_life": {"siid": 10, "aiid": 1},
-    "move": {"siid": 21, "aiid": 1},  # not in documentation
-    "play_sound": {"siid": 7, "aiid": 2},
-}
 
 MIOT_MAPPING: Dict[str, MiotMapping] = {
-    DREAME_1C: _DREAME_1C_MAPPING,
-    DREAME_F9: _DREAME_F9_MAPPING,
-    DREAME_D9: _DREAME_F9_MAPPING,
-    DREAME_Z10_PRO: _DREAME_F9_MAPPING,
-    DREAME_L10_PRO: _DREAME_TROUVER_FINDER_MAPPING,
     DREAME_L10s_PRO_ULTRA: _DREAME_L10s_PRO_ULTRA_MAPPING,
-    DREAME_MOP_2_PRO_PLUS: _DREAME_F9_MAPPING,
-    DREAME_MOP_2_ULTRA: _DREAME_F9_MAPPING,
-    DREAME_MOP_2: _DREAME_F9_MAPPING,
-    DREAME_TROUVER_FINDER: _DREAME_TROUVER_FINDER_MAPPING,
 }
 
 
@@ -258,33 +102,29 @@ class FormattableEnum(Enum):
 class ChargingState(FormattableEnum):
     Charging = 1
     Discharging = 2
-    Charging2 = 4
     GoCharging = 5
 
-
-class CleaningModeDreame1C(FormattableEnum):
-    Quiet = 0
-    Default = 1
-    Medium = 2
-    Strong = 3
-
-
 class CleaningModeDreameF9(FormattableEnum):
-    Quiet = 0
-    Standart = 1
+    Silent = 0
+    Basic = 1
     Strong = 2
-    Turbo = 3
+    Full Speed = 3
 
 
 class OperatingMode(FormattableEnum):
-    Paused = 1
-    Cleaning = 2
-    GoCharging = 3
+    Sweeping = 1
+    Idle = 2
+    Paused = 3
+    Error = 4
+    Go Charging =5
     Charging = 6
-    ManualCleaning = 13
-    Sleeping = 14
-    ManualPaused = 17
-    ZonedCleaning = 19
+    Mopping = 7
+    Drying = 8
+    Washing = 9
+    Go Washing = 10
+    Building = 11
+    Sweeping and Mopping = 12 
+    Charging Completed = 13
 
 
 class FaultStatus(FormattableEnum):
@@ -296,10 +136,14 @@ class DeviceStatus(FormattableEnum):
     Idle = 2
     Paused = 3
     Error = 4
-    GoCharging = 5
+    Go Charging =5
     Charging = 6
     Mopping = 7
     Drying = 8
+    Washing = 9
+    Go Washing = 10
+    Building = 11
+    Sweeping and Mopping = 12 
     Charging Completed = 13
 
 
