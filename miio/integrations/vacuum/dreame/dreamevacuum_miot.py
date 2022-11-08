@@ -313,6 +313,7 @@ def _get_cleaning_mode_enum_class(model):
         DREAME_Z10_PRO,
         DREAME_L10_PRO,
         DREAME_MOP_2_PRO_PLUS,
+        DREAME_L10s_PRO_ULTRA,
         DREAME_MOP_2_ULTRA,
         DREAME_MOP_2,
         DREAME_TROUVER_FINDER,
