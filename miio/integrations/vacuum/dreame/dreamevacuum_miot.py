@@ -289,7 +289,7 @@ class DeviceStatus(FormattableEnum):
     GoCharging = 5
     Charging = 6
     Mopping = 7
-    Drying = 7
+    Drying = 8
     ManualSweeping = 13
 
 
