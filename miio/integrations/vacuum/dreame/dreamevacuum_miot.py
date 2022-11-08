@@ -41,7 +41,7 @@ _DREAME_L10s_PRO_ULTRA_MAPPING: MiotMapping = {
     "cleaning-time": {"siid": 4, "piid": 2},
     "cleaning-area": {"siid": 4, "piid": 3},
     "cleaning-mode": {"siid": 4, "piid": 4},
-    "mop-mode": {"siid": 4, "piid": 5},
+    "water_flow": {"siid": 4, "piid": 5},
     "waterbox-status": {"siid": 4, "piid": 6},
     "clean-start-time": {"siid": 4, "piid": 7},
     "break-point-restart": {"siid": 4, "piid": 11},
@@ -96,6 +96,7 @@ _DREAME_L10s_PRO_ULTRA_MAPPING: MiotMapping = {
     "total_clean_area": {"siid": 12, "piid": 4},
     "mop_life_level": {"siid": 18, "piid": 1},
     "mop_left_time": {"siid": 18, "piid": 2},
+    
     
 }
     
