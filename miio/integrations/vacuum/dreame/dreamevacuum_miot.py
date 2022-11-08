@@ -23,6 +23,7 @@ DREAME_Z10_PRO = "dreame.vacuum.p2028"
 DREAME_L10_PRO = "dreame.vacuum.p2029"
 DREAME_MOP_2_PRO_PLUS = "dreame.vacuum.p2041o"
 DREAME_MOP_2_ULTRA = "dreame.vacuum.p2150a"
+DREAME_MOP_2_ULTRA = "dreame.vacuum.p2114a"
 DREAME_MOP_2 = "dreame.vacuum.p2150o"
 DREAME_TROUVER_FINDER = "dreame.vacuum.p2036"
 
