@@ -108,7 +108,7 @@ class CleaningModeDreameF9(FormattableEnum):
     Silent = 0
     Basic = 1
     Strong = 2
-    Full Speed = 3
+    FullSpeed = 3
 
 
 class OperatingMode(FormattableEnum):
@@ -116,15 +116,15 @@ class OperatingMode(FormattableEnum):
     Idle = 2
     Paused = 3
     Error = 4
-    Go Charging =5
+    GoCharging =5
     Charging = 6
     Mopping = 7
     Drying = 8
     Washing = 9
-    Go Washing = 10
+    GoWashing = 10
     Building = 11
-    Sweeping and Mopping = 12 
-    Charging Completed = 13
+    SweepingMopping = 12 
+    ChargingCompleted = 13
 
 
 class FaultStatus(FormattableEnum):
@@ -136,15 +136,15 @@ class DeviceStatus(FormattableEnum):
     Idle = 2
     Paused = 3
     Error = 4
-    Go Charging =5
+    GoCharging =5
     Charging = 6
     Mopping = 7
     Drying = 8
     Washing = 9
-    Go Washing = 10
+    GoWashing = 10
     Building = 11
-    Sweeping and Mopping = 12 
-    Charging Completed = 13
+    SweepingMopping = 12 
+    ChargingCompleted = 13
 
 
 class WaterFlow(FormattableEnum):
