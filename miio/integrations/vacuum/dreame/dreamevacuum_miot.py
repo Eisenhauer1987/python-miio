@@ -75,6 +75,7 @@ _DREAME_L10s_PRO_ULTRA_MAPPING: MiotMapping = {
     "no-water-info": {"siid": 4, "piid": 40},
     "start_clean_extend": {"siid": 4, "aiid": 1},
     "stop_clean_extend": {"siid": 4, "aiid": 2},
+    "map_view": {"siid": 6, "piid": 1},
     "brush_left_time": {"siid": 9, "piid": 1},
     "brush_life_level": {"siid": 9, "piid": 2},
     "brush_left_time2": {"siid": 10, "piid": 1},
